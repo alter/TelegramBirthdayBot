@@ -6,7 +6,7 @@ Bot for birthday notifications in Telegram chats/groups.
 
 1. Clone repository:
 ```bash
-git clone https://github.com/yourusername/TelegramBirthdayBot.git
+git clone https://github.com/alter/TelegramBirthdayBot.git
 cd TelegramBirthdayBot
 ```
 
