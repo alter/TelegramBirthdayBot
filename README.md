@@ -13,8 +13,8 @@ cd TelegramBirthdayBot
 2. Create `.env` file with your settings:
 ```bash
 TELEGRAM_BOT_TOKEN=your_bot_token  # Get from @BotFather
-TELEGRAM_CHAT_ID=your_chat_id      # Chat/Group ID where bot will send notifications
-CSV_PATH=/app/data/birthdays.csv   # Path to CSV file inside container
+TELEGRAM_CHAT_ID=your_chat_id      # Chat/Group ID where bot will send notifications, get from web.telegram.org URL
+CSV_PATH=/app/birthdays.csv   # Path to CSV file inside container
 ```
 
 3. Prepare birthdays data file:
