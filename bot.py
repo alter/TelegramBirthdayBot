@@ -66,7 +66,7 @@ class BirthdayBot:
        for name, username, _ in birthdays:
            message = f"Сегодня день рождения у: {name}"
            if username:
-               message += f" (@{username})"
+               message += f" ({username})"
            messages.append(message)
        await context.bot.send_message(
            chat_id=self.chat_id,
@@ -91,7 +91,7 @@ class BirthdayBot:
            await update.message.reply_text("Сегодня нет дней рождения")
            return
        await update.message.reply_text("\n".join(
-           f"{name} (@{username})" if username else name 
+           f"{name} ({username})" if username else name 
            for name, username, _ in birthdays
        ))
 
@@ -115,7 +115,7 @@ class BirthdayBot:
            if date.month != current_month:
                current_month = date.month
                result.append(f"\n{date.strftime('%B')}:")
-           result.append(f"{date.day}: {name}" + (f" (@{username})" if username else ""))
+           result.append(f"{date.day}: {name}" + (f" ({username})" if username else ""))
 
        await update.message.reply_text("\n".join(result) if result else "Нет дней рождения")
 
